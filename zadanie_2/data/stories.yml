@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+  - story: hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: by
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: menu
+    steps:
+      - intent: list_menu
+      - action: utter_list_menu
+
+  - story: check_opening_hours
+    steps:
+      - intent: check_opening_hours
+      - action: utter_check_opening_hours
+
+
+  - story: story_place_order
+    steps:
+      - intent: place_order
+      - action: utter_place_order
+

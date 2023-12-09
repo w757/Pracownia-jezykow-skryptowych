@@ -1,0 +1,37 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - list_menu
+  - check_opening_hours
+  - place_order
+
+
+responses:
+  utter_greet:
+  - text: "Hello, how can I help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_list_menu:
+  - text: "Today menu:\n\nLasagne - 16\nPizza - 12\nBurger -14"
+
+
+  utter_check_opening_hours:
+  - text: "Opening hours Monday - 8am - 9pm\n\n
+        Tuesday - 8am - 9pm\n
+        Wednesday - 8am - 9pm\n
+        Thursday - 8am - 9pm\n
+        Friday - 8am - 9pm\n
+        Saturday - 8am - 6pm\n
+        Sunday - 8am - 6pm\n"
+
+  utter_place_order:
+  - text: "What would you like to order?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
