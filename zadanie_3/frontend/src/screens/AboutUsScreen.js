@@ -1,11 +1,7 @@
-import Row from 'react-bootstrap/Row';
+import Row from "react-bootstrap/Row";
 
 function AboutUSScreen() {
-  return (
-    <Row>
-     AboutUsScreen - TO DO 
-  </Row>
-  );
+  return <Row> </Row>;
 }
 
 export default AboutUSScreen;

@@ -5,7 +5,6 @@ import Product from "../components/Product";
 import { Row, Col } from "react-bootstrap";
 
 function CategoryScreen() {
-  //const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const params = useParams();
   const { category } = params;
@@ -33,7 +32,7 @@ function CategoryScreen() {
   }
   return (
     <div>
-      <h2>{category}:</h2>
+      <h1>{category}:</h1>
       <Row>
         {products.map((product) => (
           <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">

@@ -7,7 +7,7 @@ import AboutUSScreen from "./screens/AboutUsScreen";
 import LogInScreen from "./screens/LogInScreen";
 import CategoryScreen from "./screens/CategoryScreen";
 import NotFoundScreen from "./screens/NotFoundScreen";
-
+import FooterComponent from "./components/FooterComponent";
 
 function App() {
   return (
@@ -28,21 +28,9 @@ function App() {
               <Route element={<NotFoundScreen />} />
             </Routes>
           </Container>
-
-          {/* <Nav className="me-auto">
-                <Link to="/cart" className="nav-link">
-                  Cart
-                  {cart.cartItems.length > 0 && (
-                    <Badge pill bg="danger">
-                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                    </Badge>
-                  )}
-                </Link>
-              </Nav> */}
         </main>
-        <footer>
-          <div className="text-center">djsljdsklf</div>
-        </footer>
+
+        <FooterComponent></FooterComponent>
       </div>
     </BrowserRouter>
   );

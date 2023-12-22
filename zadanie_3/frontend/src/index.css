@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.site-container{
+.site-container {
   min-height: 100vh;
 }
 
@@ -15,45 +15,42 @@ main {
   flex: 1;
 }
 
-
-/* header {
-  background-color: darkgrey;
-  padding: 1rem;
+h1 {
+  margin-top: 1%;
+  color: #1c1c1c;
 }
 
-header a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none; 
-} 
-*/
 main {
   padding: auto;
 }
 
-.btn-primary {
-  background-color: #f0c040;
-  color: #000000;
-}
-
 .products {
-  display: flex; /*produkty beda wyswietlone obok siebie */
-  flex-wrap: wrap; /*responsywnosc*/
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-}
-
-.rating span {
-  color: #ffc000;
+  color: #000000;
+  text-decoration: none;
 }
 
 .product {
   border: 1px solid rgb(69, 68, 68);
-  margin: 1rem;
+  margin-top: 5px;
 }
 
 .product img {
-  width: 100%;
+  width: 200px;
   max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.card-img-top {
+  width: 200px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-description {
@@ -62,5 +59,67 @@ main {
 
 .product-name {
   font-weight: bold;
-  text-decoration: none; /*link bez podkreslenia*/
+  text-decoration: none;
+  color: #000000;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Login*/
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-login {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/*Navbar*/
+
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  background-color: rgba(81, 78, 78, 0.1);
+  color: white;
+}
+
+.navbar .nav-link:active,
+.navbar .dropdown-item:active {
+  background-color: rgba(81, 78, 78, 0.1);
+  color: white;
+}
+
+/* Button*/
+
+.btn-primary {
+  background-color: #2f3032;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #181819;
+}
+
+
+/*Card*/
+.product-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

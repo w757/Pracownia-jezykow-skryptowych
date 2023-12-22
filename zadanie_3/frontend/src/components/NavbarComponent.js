@@ -7,9 +7,10 @@ const NavbarComponent = () => {
   return (
     <Navbar expand="lg" variant="dark" bg="dark" fixed="left">
       <LinkContainer to="/">
-      <Navbar.Brand>BookNook</Navbar.Brand>
+        <Navbar.Brand>BookNook</Navbar.Brand>
       </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="flex-column">
           <NavDropdown title="Genres" id="basic-nav-dropdown">
@@ -27,7 +28,6 @@ const NavbarComponent = () => {
             </LinkContainer>
           </NavDropdown>
 
-
           <LinkContainer to="/about-us">
             <Nav.Link>About us</Nav.Link>
           </LinkContainer>
@@ -35,7 +35,6 @@ const NavbarComponent = () => {
           <LinkContainer to="/log-in">
             <Nav.Link>Log in</Nav.Link>
           </LinkContainer>
-          
         </Nav>
       </Navbar.Collapse>
     </Navbar>

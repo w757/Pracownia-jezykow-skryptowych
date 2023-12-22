@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Product from "../components/Product";
-import { Row, Col, Container } from "react-bootstrap";
+import FullProduct from "../components/FullProduct";
+import { Row } from "react-bootstrap";
 
 const ProductScreen = () => {
-  const { _id } = useParams(); // Pobieranie ID produktu z URL
+  const { _id } = useParams();
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
 
@@ -16,9 +16,9 @@ const ProductScreen = () => {
         setProduct(response.data);
       } catch (err) {
         if (err.response && err.response.status === 404) {
-          setError('Product not found');
+          setError("Product not found");
         } else {
-          setError('Page not found');
+          setError("Page not found");
         }
       }
     };
@@ -36,36 +36,9 @@ const ProductScreen = () => {
 
   return (
     <Row>
-  
-        <Product product={product}></Product>
-
-  </Row>
+      <FullProduct product={product}></FullProduct>
+    </Row>
   );
 };
 
 export default ProductScreen;
-
-
-// function ProductScreen() {
-//   const params = useParams();
-//   const { id } = params;
-
-//   const [products, setProducts] = useState([]);
-//   useEffect(() => {
-//     const featchData = async () => {
-//       const result = await axios.get(`/api/products/id/${id}`);
-//       setProducts(result.data);
-//     };
-//     featchData();
-//   }, [id]);
-
-//   return (
-//     //<div>{products.id}</div>
-
-//     <Container>
-//       <Product product={products}></Product>
-//     </Container>
-//   );
-// }
-
-// export default ProductScreen;

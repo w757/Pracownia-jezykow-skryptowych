@@ -8,24 +8,6 @@ categoryRouter.get("/", async (req, res) => {
   res.send(products);
 });
 
-// categoryRouter.get("/category/:category", async (req, res) => {
-//     const product = await Product.findOne({ category: req.params.category });
-
-//   if (product) {
-//     res.send(product);
-//   } else {
-//     res.status(404).send({ message: "Product Not Found" });
-//   }
-// });
-// categoryRouter.get("/:category", async (req, res) => {
-//   const product = await Product.findById(req.params.category);
-//   if (product) {
-//     res.send(product);
-//   } else {
-//     res.status(404).send({ message: "Product Not Found" });
-//   }
-// });
-
 categoryRouter.get("/:category", async (req, res) => {
   try {
     const isValidId = /[a-fA-F]/.test(req.params.id);
@@ -46,21 +28,3 @@ categoryRouter.get("/:category", async (req, res) => {
 });
 
 export default categoryRouter;
-
-// try {
-
-//   if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-//     return res.status(404).send({ message: "Invalid Product ID" });
-//   }
-
-//   const product = await Product.findById(req.params.id);
-
-//   if (product) {
-//     res.send(product);
-//   } else {
-//     res.status(404).send({ message: "Product Not Found" });
-//   }
-
-// } catch (error) {
-//   res.status(500).send({ message: error.message || "An error occurred" });
-// }
